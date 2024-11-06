@@ -48,7 +48,7 @@ describe("Api tests", () => {
     console.log("another it block " + token_response);
   });
 
-  it.only("Add a book", async () => {
+  it.skip("Add a book", async () => {
     const response = await spec()
       .post(`${baseUrl}/BookStore/v1/Books`)
       .withBearerToken(token_response)
@@ -63,7 +63,7 @@ describe("Api tests", () => {
     expect(response.statusCode).to.eql(201);
   });
 
-  it.only("Check a book", async () => {
+  it.skip("Check a book", async () => {
     const response = await spec()
       .get(`${baseUrl}/Account/v1/User/${userID}`)
       .withBearerToken(token_response)
@@ -71,11 +71,11 @@ describe("Api tests", () => {
     expect(response.statusCode).to.eql(200);
   });
 
-  it.only("Delete all book", async () => {
+  it.skip("Delete all book", async () => {
     const response = await spec()
       .delete(`${baseUrl}/Account/v1/User/${userID}`)
-      .inspect()
       .withBearerToken(token_response)
+      .inspect()
     expect(response.statusCode).to.eql(204)
     expect(response.body.books).to.eql([])
   });
