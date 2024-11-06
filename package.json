@@ -12,6 +12,7 @@
   "type": "module",
   "devDependencies": {
     "chai": "^5.1.2",
+    "dotenv": "^16.4.5",
     "mocha": "^10.8.2",
     "pactum": "^3.7.3"
   }
