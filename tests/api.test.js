@@ -57,7 +57,7 @@ describe("Api tests", () => {
         "userId": userID,
        "collectionOfIsbns": [
         {
-            isbn: "9781449325862",
+            "isbn": "9781449325862",
         }],
       });
     expect(response.statusCode).to.eql(201);
